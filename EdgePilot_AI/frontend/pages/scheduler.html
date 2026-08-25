@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EdgePilot AI | Scheduler</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            EP
+        </div>
+
+        <div>
+
+            <span class="brand-name">
+                EdgePilot
+            </span>
+
+            <span class="brand-ai">
+                AI
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <a href="../index.html"
+           class="nav-link">
+            Dashboard
+        </a>
+
+        <a href="simulation.html"
+           class="nav-link">
+            Simulation
+        </a>
+
+        <a href="scheduler.html"
+           class="nav-link active">
+            Scheduler
+        </a>
+
+        <a href="evaluation.html"
+           class="nav-link">
+            Evaluation
+        </a>
+
+    </nav>
+
+
+    <div class="connection-status">
+
+        <span class="status-dot"></span>
+
+        AI Engine Active
+
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+
+    <section class="page-header">
+
+        <div>
+
+            <p class="eyebrow">
+                INTELLIGENT SCHEDULING
+            </p>
+
+            <h1>
+                Scheduler Decisions
+            </h1>
+
+            <p class="page-description">
+                Inspect how EdgePilot evaluates nodes
+                and selects workload placement.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Scheduler Summary -->
+    <section class="metrics-grid">
+
+        <div class="metric-card">
+
+            <div class="metric-label">
+                Decisions
+            </div>
+
+            <div class="metric-value"
+                 id="decisionCount">
+                128
+            </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <div class="metric-label">
+                Successful
+            </div>
+
+            <div class="metric-value healthy-text">
+                124
+            </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <div class="metric-label">
+                Migrations
+            </div>
+
+            <div class="metric-value">
+                18
+            </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <div class="metric-label">
+                Avg Score
+            </div>
+
+            <div class="metric-value">
+                0.91
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Current Decision -->
+    <section class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Latest Decision
+                </h2>
+
+                <p>
+                    AI-assisted workload placement
+                </p>
+
+            </div>
+
+            <span class="live-badge">
+                AI
+            </span>
+
+        </div>
+
+
+        <div class="decision-detail">
+
+            <div class="decision-target">
+
+                <span>
+                    Workload
+                </span>
+
+                <strong>
+                    W-104
+                </strong>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="decision-target">
+
+                <span>
+                    Selected Node
+                </span>
+
+                <strong class="healthy-text">
+                    N-07
+                </strong>
+
+            </div>
+
+
+            <div class="decision-target">
+
+                <span>
+                    Score
+                </span>
+
+                <strong>
+                    0.94
+                </strong>
+
+            </div>
+
+
+            <div class="decision-target">
+
+                <span>
+                    Risk
+                </span>
+
+                <strong class="healthy-text">
+                    3%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Candidate Nodes -->
+    <section class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Candidate Node Scoring
+                </h2>
+
+                <p>
+                    Eligibility and AI scoring for W-104
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table class="data-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Node
+                        </th>
+
+                        <th>
+                            CPU
+                        </th>
+
+                        <th>
+                            Memory
+                        </th>
+
+                        <th>
+                            Latency
+                        </th>
+
+                        <th>
+                            Risk
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Decision
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <strong>N-01</strong>
+                        </td>
+
+                        <td>
+                            72%
+                        </td>
+
+                        <td>
+                            61%
+                        </td>
+
+                        <td>
+                            18 ms
+                        </td>
+
+                        <td>
+                            8%
+                        </td>
+
+                        <td>
+                            0.81
+                        </td>
+
+                        <td>
+                            <span class="tag">
+                                Eligible
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="selected-row">
+
+                        <td>
+                            <strong>N-03</strong>
+                        </td>
+
+                        <td>
+                            45%
+                        </td>
+
+                        <td>
+                            48%
+                        </td>
+
+                        <td>
+                            21 ms
+                        </td>
+
+                        <td>
+                            3%
+                        </td>
+
+                        <td>
+                            <strong class="healthy-text">
+                                0.94
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="tag success-tag">
+                                SELECTED
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>N-07</strong>
+                        </td>
+
+                        <td>
+                            51%
+                        </td>
+
+                        <td>
+                            55%
+                        </td>
+
+                        <td>
+                            29 ms
+                        </td>
+
+                        <td>
+                            18%
+                        </td>
+
+                        <td>
+                            0.76
+                        </td>
+
+                        <td>
+                            <span class="tag">
+                                Eligible
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>N-09</strong>
+                        </td>
+
+                        <td>
+                            83%
+                        </td>
+
+                        <td>
+                            70%
+                        </td>
+
+                        <td>
+                            14 ms
+                        </td>
+
+                        <td>
+                            31%
+                        </td>
+
+                        <td>
+                            0.62
+                        </td>
+
+                        <td>
+                            <span class="tag danger-tag">
+                                High Risk
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Decision Log -->
+    <section class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Decision History
+                </h2>
+
+                <p>
+                    Recent scheduler actions
+                </p>
+
+            </div>
+
+            <button class="btn"
+                    id="refreshDecisions">
+
+                Refresh
+
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table class="data-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Time
+                        </th>
+
+                        <th>
+                            Workload
+                        </th>
+
+                        <th>
+                            Node
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Risk
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="decisionTable">
+
+                    <tr>
+                        <td>17:45</td>
+                        <td>W-104</td>
+                        <td>N-03</td>
+                        <td>0.94</td>
+                        <td>3%</td>
+                        <td>
+                            <span class="healthy-text">
+                                Scheduled
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>17:44</td>
+                        <td>W-112</td>
+                        <td>N-04</td>
+                        <td>0.91</td>
+                        <td>5%</td>
+                        <td>
+                            <span class="healthy-text">
+                                Scheduled
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>17:42</td>
+                        <td>W-101</td>
+                        <td>N-07</td>
+                        <td>0.88</td>
+                        <td>9%</td>
+                        <td>
+                            <span class="healthy-text">
+                                Migrated
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/decisions.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>

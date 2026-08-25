@@ -1,0 +1,38 @@
+[
+  {
+    "id": "traffic-controller",
+    "name": "Traffic Controller",
+    "priority": 5,
+    "cpu_required": 2,
+    "memory_required": 3,
+    "gpu_required": false,
+    "demand": 65
+  },
+  {
+    "id": "camera-analytics",
+    "name": "Camera Analytics",
+    "priority": 4,
+    "cpu_required": 3,
+    "memory_required": 4,
+    "gpu_required": true,
+    "demand": 55
+  },
+  {
+    "id": "parking-service",
+    "name": "Smart Parking",
+    "priority": 3,
+    "cpu_required": 1.5,
+    "memory_required": 2,
+    "gpu_required": false,
+    "demand": 45
+  },
+  {
+    "id": "emergency-alert",
+    "name": "Emergency Alert",
+    "priority": 5,
+    "cpu_required": 2,
+    "memory_required": 2,
+    "gpu_required": false,
+    "demand": 30
+  }
+]

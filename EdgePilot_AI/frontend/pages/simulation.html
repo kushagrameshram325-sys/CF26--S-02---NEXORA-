@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EdgePilot AI | Simulation</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-logo">EP</div>
+
+        <div>
+            <span class="brand-name">
+                EdgePilot
+            </span>
+
+            <span class="brand-ai">
+                AI
+            </span>
+        </div>
+    </div>
+
+
+    <nav class="navigation">
+
+        <a href="../index.html"
+           class="nav-link">
+            Dashboard
+        </a>
+
+        <a href="simulation.html"
+           class="nav-link active">
+            Simulation
+        </a>
+
+        <a href="scheduler.html"
+           class="nav-link">
+            Scheduler
+        </a>
+
+        <a href="evaluation.html"
+           class="nav-link">
+            Evaluation
+        </a>
+
+    </nav>
+
+
+    <div class="connection-status">
+
+        <span class="status-dot"></span>
+
+        Simulator Ready
+
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="page-header">
+
+        <div>
+
+            <p class="eyebrow">
+                FAULT & LOAD LAB
+            </p>
+
+            <h1>
+                Simulation Center
+            </h1>
+
+            <p class="page-description">
+                Inject faults and workload changes
+                to test EdgePilot recovery.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="simulation-grid">
+
+
+        <!-- Scenario Controls -->
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Scenario Controls
+                    </h2>
+
+                    <p>
+                        Configure simulation conditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="scenario">
+                    Fault / Load Scenario
+                </label>
+
+                <select id="scenario">
+
+                    <option value="node_failure">
+                        Node Failure
+                    </option>
+
+                    <option value="cpu_spike">
+                        CPU Spike
+                    </option>
+
+                    <option value="network_latency">
+                        Network Latency
+                    </option>
+
+                    <option value="workload_surge">
+                        Workload Surge
+                    </option>
+
+                    <option value="anomaly">
+                        AI Anomaly
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="targetNode">
+                    Target Node
+                </label>
+
+                <select id="targetNode">
+
+                    <option value="N-01">
+                        N-01
+                    </option>
+
+                    <option value="N-02">
+                        N-02
+                    </option>
+
+                    <option value="N-03">
+                        N-03
+                    </option>
+
+                    <option value="N-04">
+                        N-04
+                    </option>
+
+                    <option value="N-05">
+                        N-05
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="intensity">
+
+                    Intensity
+
+                    <span id="intensityValue">
+                        50%
+                    </span>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="intensity"
+                    min="10"
+                    max="100"
+                    value="50">
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button
+                    class="btn primary"
+                    id="startSimulation">
+
+                    ▶ Start Simulation
+
+                </button>
+
+
+                <button
+                    class="btn"
+                    id="pauseSimulation">
+
+                    ⏸ Pause
+
+                </button>
+
+
+                <button
+                    class="btn danger"
+                    id="resetSimulation">
+
+                    ↻ Reset
+
+                </button>
+
+            </div>
+
+
+            <div id="simulationStatus"
+                 class="result-box">
+
+                Simulation ready.
+
+            </div>
+
+        </div>
+
+
+        <!-- Scenario Information -->
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <h2>
+                    Scenario Information
+                </h2>
+
+            </div>
+
+
+            <div class="scenario-card">
+
+                <h3>
+                    Node Failure
+                </h3>
+
+                <p>
+                    Simulates an edge node becoming unavailable.
+                    EdgePilot should detect the failure and
+                    migrate affected workloads.
+                </p>
+
+            </div>
+
+
+            <div class="scenario-card">
+
+                <h3>
+                    CPU Spike
+                </h3>
+
+                <p>
+                    Increases CPU utilization and tests
+                    predictive workload redistribution.
+                </p>
+
+            </div>
+
+
+            <div class="scenario-card">
+
+                <h3>
+                    Network Latency
+                </h3>
+
+                <p>
+                    Introduces communication delay between
+                    edge nodes.
+                </p>
+
+            </div>
+
+
+            <div class="scenario-card">
+
+                <h3>
+                    Workload Surge
+                </h3>
+
+                <p>
+                    Generates additional workloads and
+                    evaluates scheduler scalability.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Simulation Output -->
+    <section class="dashboard-grid">
+
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <h2>
+                    Simulation Topology
+                </h2>
+
+                <span class="live-badge">
+                    SIMULATION
+                </span>
+
+            </div>
+
+            <div id="simulationTopology"></div>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <h2>
+                    Simulation Events
+                </h2>
+
+            </div>
+
+            <div id="simulationEvents">
+
+                <div class="empty-state">
+                    No events yet.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/topology.js"></script>
+<script src="../js/simulation.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>

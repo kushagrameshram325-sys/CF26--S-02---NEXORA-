@@ -1,0 +1,55 @@
+<div class="metrics-widget">
+
+    <div class="metric-widget-header">
+
+        <div>
+            <span class="metric-widget-title">
+                System Performance
+            </span>
+
+            <span class="metric-widget-subtitle">
+                Real-time measurements
+            </span>
+        </div>
+
+        <select id="metricsPeriod">
+
+            <option value="10">
+                10 min
+            </option>
+
+            <option value="30">
+                30 min
+            </option>
+
+            <option value="60">
+                1 hour
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="chart-wrapper">
+
+        <canvas id="metricsChart"></canvas>
+
+    </div>
+
+
+    <div class="chart-legend">
+
+        <div>
+            <span class="legend-dot latency"></span>
+            Latency
+        </div>
+
+        <div>
+            <span class="legend-dot utilization"></span>
+            CPU Utilization
+        </div>
+
+    </div>
+
+</div>

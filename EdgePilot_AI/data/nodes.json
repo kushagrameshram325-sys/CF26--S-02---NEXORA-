@@ -1,0 +1,57 @@
+[
+  {
+    "id": "edge-01",
+    "name": "EDGE-01",
+    "tier": "edge",
+    "cpu_capacity": 8,
+    "memory_capacity": 16,
+    "bandwidth_mbps": 300,
+    "latency_ms": 15,
+    "reliability": 0.97,
+    "gpu": false
+  },
+  {
+    "id": "edge-02",
+    "name": "EDGE-02",
+    "tier": "edge",
+    "cpu_capacity": 8,
+    "memory_capacity": 16,
+    "bandwidth_mbps": 250,
+    "latency_ms": 20,
+    "reliability": 0.96,
+    "gpu": true
+  },
+  {
+    "id": "regional-01",
+    "name": "REGIONAL-01",
+    "tier": "regional",
+    "cpu_capacity": 24,
+    "memory_capacity": 64,
+    "bandwidth_mbps": 700,
+    "latency_ms": 35,
+    "reliability": 0.985,
+    "gpu": true
+  },
+  {
+    "id": "regional-02",
+    "name": "REGIONAL-02",
+    "tier": "regional",
+    "cpu_capacity": 32,
+    "memory_capacity": 96,
+    "bandwidth_mbps": 800,
+    "latency_ms": 45,
+    "reliability": 0.99,
+    "gpu": false
+  },
+  {
+    "id": "cloud-01",
+    "name": "CLOUD-01",
+    "tier": "cloud",
+    "cpu_capacity": 64,
+    "memory_capacity": 256,
+    "bandwidth_mbps": 1500,
+    "latency_ms": 90,
+    "reliability": 0.999,
+    "gpu": true
+  }
+]

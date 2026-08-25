@@ -1,0 +1,119 @@
+@media (max-width: 1200px) {
+
+    .dashboard-container {
+        width: 94%;
+    }
+
+    .metrics-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .topbar {
+        gap: 18px;
+    }
+
+    .brand {
+        min-width: auto;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .topbar {
+        height: auto;
+
+        padding: 12px 4%;
+
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        order: 3;
+
+        width: 100%;
+
+        flex-basis: 100%;
+
+        overflow-x: auto;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+
+        white-space: nowrap;
+    }
+
+    .connection-status {
+        display: none;
+    }
+
+    .dashboard-container {
+        width: 92%;
+
+        padding-top: 25px;
+    }
+
+    .page-header {
+        flex-direction: column;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .metrics-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .metric-card {
+        padding: 15px;
+    }
+
+    .metric-value {
+        font-size: 23px;
+    }
+
+    .dashboard-panel {
+        padding: 15px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .dashboard-container {
+        width: 94%;
+    }
+
+}

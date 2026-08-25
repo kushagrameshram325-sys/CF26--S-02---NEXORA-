@@ -1,0 +1,32 @@
+[
+  {
+    "id": "traffic_surge",
+    "name": "Traffic Surge",
+    "description": "Increase workload demand."
+  },
+  {
+    "id": "network_failure",
+    "name": "Network Failure",
+    "description": "Increase latency and packet loss on EDGE-01."
+  },
+  {
+    "id": "kill_node",
+    "name": "Kill Node",
+    "description": "Mark EDGE-01 as unhealthy."
+  },
+  {
+    "id": "migrate",
+    "name": "Migrate",
+    "description": "Evaluate and migrate Traffic Controller."
+  },
+  {
+    "id": "ai_predict",
+    "name": "AI Predict",
+    "description": "Run demand prediction and anomaly detection."
+  },
+  {
+    "id": "auto_mode",
+    "name": "Auto Mode",
+    "description": "Toggle autonomous scheduling."
+  }
+]

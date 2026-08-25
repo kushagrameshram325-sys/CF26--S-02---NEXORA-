@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EdgePilot AI | Edge Computing Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-logo">EP</div>
+
+            <div>
+                <span class="brand-name">EdgePilot</span>
+                <span class="brand-ai">AI</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="pages/simulation.html" class="nav-link">
+                Simulation
+            </a>
+
+            <a href="pages/scheduler.html" class="nav-link">
+                Scheduler
+            </a>
+
+            <a href="pages/evaluation.html" class="nav-link">
+                Evaluation
+            </a>
+
+        </nav>
+
+        <div class="connection-status">
+            <span class="status-dot"></span>
+            Backend Connected
+        </div>
+
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-container">
+
+        <!-- Page Header -->
+        <section class="page-header">
+
+            <div>
+                <p class="eyebrow">
+                    EDGE COMPUTING CONTROL CENTER
+                </p>
+
+                <h1>
+                    EdgePilot AI Dashboard
+                </h1>
+
+                <p class="page-description">
+                    Intelligent workload scheduling, anomaly detection,
+                    migration and failure recovery.
+                </p>
+            </div>
+
+            <div class="system-status healthy">
+                <span>●</span>
+                SYSTEM HEALTHY
+            </div>
+
+        </section>
+
+
+        <!-- Metrics -->
+        <section class="metrics-grid">
+
+            <div class="metric-card">
+                <div class="metric-label">
+                    Edge Nodes
+                </div>
+
+                <div class="metric-value" id="nodeCount">
+                    12
+                </div>
+
+                <div class="metric-info">
+                    Active nodes
+                </div>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="metric-label">
+                    Workloads
+                </div>
+
+                <div class="metric-value" id="workloadCount">
+                    38
+                </div>
+
+                <div class="metric-info">
+                    Running workloads
+                </div>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="metric-label">
+                    CPU Utilization
+                </div>
+
+                <div class="metric-value" id="cpuUsage">
+                    64%
+                </div>
+
+                <div class="metric-info">
+                    Cluster average
+                </div>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="metric-label">
+                    Network Latency
+                </div>
+
+                <div class="metric-value" id="latency">
+                    18 ms
+                </div>
+
+                <div class="metric-info">
+                    Average latency
+                </div>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="metric-label">
+                    Active Faults
+                </div>
+
+                <div class="metric-value warning-text" id="faultCount">
+                    1
+                </div>
+
+                <div class="metric-info">
+                    Detected anomalies
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+        <section class="dashboard-grid">
+
+
+            <!-- Topology -->
+            <div class="dashboard-panel topology-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Edge Network Topology</h2>
+                        <p>
+                            Live node connectivity
+                        </p>
+                    </div>
+
+                    <span class="live-badge">
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="topology">
+
+                    <div class="connection connection-1"></div>
+                    <div class="connection connection-2"></div>
+                    <div class="connection connection-3"></div>
+                    <div class="connection connection-4"></div>
+
+
+                    <div class="edge-node node-1">
+                        <span>N-01</span>
+                        <small>42% CPU</small>
+                    </div>
+
+                    <div class="edge-node node-2">
+                        <span>N-02</span>
+                        <small>57% CPU</small>
+                    </div>
+
+                    <div class="edge-node node-3 warning-node">
+                        <span>N-03</span>
+                        <small>82% CPU</small>
+                    </div>
+
+                    <div class="edge-node node-4">
+                        <span>N-04</span>
+                        <small>37% CPU</small>
+                    </div>
+
+                    <div class="edge-node node-5">
+                        <span>N-05</span>
+                        <small>51% CPU</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI Decisions -->
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>AI Decisions</h2>
+                        <p>
+                            Latest scheduler actions
+                        </p>
+                    </div>
+
+                    <a href="pages/scheduler.html"
+                       class="panel-link">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="decision-list">
+
+                    <div class="decision">
+
+                        <div class="decision-icon success">
+                            ✓
+                        </div>
+
+                        <div class="decision-content">
+                            <strong>
+                                Workload W-104 migrated
+                            </strong>
+
+                            <span>
+                                N-03 → N-07
+                            </span>
+                        </div>
+
+                        <small>
+                            2m
+                        </small>
+
+                    </div>
+
+
+                    <div class="decision">
+
+                        <div class="decision-icon warning">
+                            !
+                        </div>
+
+                        <div class="decision-content">
+                            <strong>
+                                N-05 risk detected
+                            </strong>
+
+                            <span>
+                                Predicted failure probability: 18%
+                            </span>
+                        </div>
+
+                        <small>
+                            4m
+                        </small>
+
+                    </div>
+
+
+                    <div class="decision">
+
+                        <div class="decision-icon success">
+                            ✓
+                        </div>
+
+                        <div class="decision-content">
+                            <strong>
+                                W-112 scheduled
+                            </strong>
+
+                            <span>
+                                Selected N-04
+                            </span>
+                        </div>
+
+                        <small>
+                            6m
+                        </small>
+
+                    </div>
+
+
+                    <div class="decision">
+
+                        <div class="decision-icon success">
+                            ✓
+                        </div>
+
+                        <div class="decision-content">
+                            <strong>
+                                Load balanced
+                            </strong>
+
+                            <span>
+                                N-02 → N-06
+                            </span>
+                        </div>
+
+                        <small>
+                            9m
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Node Health -->
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Node Health</h2>
+                        <p>
+                            Current resource utilization
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="node-list">
+
+                    <div class="node-row">
+
+                        <div class="node-info">
+                            <strong>N-01</strong>
+                            <span class="healthy-text">
+                                Healthy
+                            </span>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress">
+                                <span style="width:42%"></span>
+                            </div>
+                        </div>
+
+                        <span>42%</span>
+
+                    </div>
+
+
+                    <div class="node-row">
+
+                        <div class="node-info">
+                            <strong>N-02</strong>
+                            <span class="healthy-text">
+                                Healthy
+                            </span>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress">
+                                <span style="width:57%"></span>
+                            </div>
+                        </div>
+
+                        <span>57%</span>
+
+                    </div>
+
+
+                    <div class="node-row">
+
+                        <div class="node-info">
+                            <strong>N-03</strong>
+                            <span class="warning-text">
+                                Warning
+                            </span>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress warning-progress">
+                                <span style="width:82%"></span>
+                            </div>
+                        </div>
+
+                        <span>82%</span>
+
+                    </div>
+
+
+                    <div class="node-row">
+
+                        <div class="node-info">
+                            <strong>N-04</strong>
+                            <span class="healthy-text">
+                                Healthy
+                            </span>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress">
+                                <span style="width:37%"></span>
+                            </div>
+                        </div>
+
+                        <span>37%</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Events -->
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Recent Events</h2>
+                        <p>
+                            System activity
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="event-list">
+
+                    <div class="event">
+
+                        <span class="event-time">
+                            17:42
+                        </span>
+
+                        <span class="event-message">
+                            Node N-03 CPU threshold exceeded
+                        </span>
+
+                        <span class="event-status warning-text">
+                            WARNING
+                        </span>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <span class="event-time">
+                            17:43
+                        </span>
+
+                        <span class="event-message">
+                            AI predicted node degradation
+                        </span>
+
+                        <span class="event-status">
+                            AI
+                        </span>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <span class="event-time">
+                            17:44
+                        </span>
+
+                        <span class="event-message">
+                            Workload W-104 migration completed
+                        </span>
+
+                        <span class="event-status healthy-text">
+                            SUCCESS
+                        </span>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <span class="event-time">
+                            17:45
+                        </span>
+
+                        <span class="event-message">
+                            Scheduler rebalanced cluster
+                        </span>
+
+                        <span class="event-status healthy-text">
+                            SUCCESS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Performance -->
+        <section class="dashboard-panel performance-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Performance Overview</h2>
+
+                    <p>
+                        Latency and resource utilization
+                    </p>
+                </div>
+
+                <select id="metricPeriod">
+                    <option>Last 10 minutes</option>
+                    <option>Last 30 minutes</option>
+                    <option>Last hour</option>
+                </select>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <canvas id="performanceChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/metrics.js"></script>
+    <script src="js/topology.js"></script>
+    <script src="js/nodes.js"></script>
+    <script src="js/decisions.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
